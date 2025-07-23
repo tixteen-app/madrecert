@@ -117,7 +117,7 @@ export function BlogSection() {
                 {/* Meta Info */}
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                   <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
+                    {/* <Calendar className="h-4 w-4" /> */}
                     <span>{post.date}</span>
                   </div>
                   <div className="flex items-center gap-1">
@@ -194,7 +194,7 @@ export function BlogSection() {
               </p>
               <div className="flex items-center gap-6 mb-6">
                 <div className="flex items-center gap-2 text-blue-200">
-                  <Calendar className="h-4 w-4" />
+                  {/* <Calendar className="h-4 w-4" /> */}
                   <span className="text-sm">January 18, 2025</span>
                 </div>
                 <div className="flex items-center gap-2 text-blue-200">
