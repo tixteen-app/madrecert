@@ -3,7 +3,9 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowUp } from 'lucide-react';
 import { Button } from './ui/button';
-import madreLogo from '../../public/palji_3.jpg';
+// import madreLogo from '../../public/palji_3.jpg';
+const madreLogo = 'https://folk-dawn-94548267.figma.site/_assets/v10/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png';
+
 
 export function Footer() {
   const scrollToTop = () => {
@@ -85,11 +87,11 @@ export function Footer() {
               >
                 {/* Logo */}
                 <div className="flex items-center space-x-2 mb-6">
-                  <div className="h-12 w-auto">
+                  <div className="h-22 w-auto bg-white rounded-lg shadow-md">
                     <img 
-                      src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Flogo-concept&psig=AOvVaw3A-qlSsMhkHpgptsASM-56&ust=1753355322701000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKjy3Nrr0o4DFQAAAAAdAAAAABAE"
+                      src="https://folk-dawn-94548267.figma.site/_assets/v10/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png"
                       alt="MADRE Certification" 
-                      className="h-full w-auto object-contain"
+                      className="h-[80px] w-[80px] object-contain"
                     />
                   </div>
                 </div>
@@ -103,11 +105,11 @@ export function Footer() {
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center gap-3">
                     <MapPin className="h-4 w-4 text-brand-gold flex-shrink-0" />
-                    <span className="text-sm">123 Business Plaza, London EC1A 1BB, UK</span>
+                    <span className="text-sm">Operating Office: B HIVE 11, B-2/11,1st Floor, Mohan Cooperative Industrial Estate, New Delhi-110044 India</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="h-4 w-4 text-brand-gold flex-shrink-0" />
-                    <span className="text-sm">+44 20 7123 4567</span>
+                    <span className="text-sm">+91-9125191256</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-4 w-4 text-brand-gold flex-shrink-0" />

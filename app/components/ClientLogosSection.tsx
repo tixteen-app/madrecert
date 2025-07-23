@@ -3,23 +3,25 @@
 import { motion } from 'framer-motion';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 // import madreLogo from 'figma:asset/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png';
-import madreLogo from '../../public/palji_3.jpg';
+// import madreLogo from '../../public/palji_3.jpg';
+const madreLogo = 'https://folk-dawn-94548267.figma.site/_assets/v10/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png';
+
 
 
 export function ClientLogosSection() {
   // All client logos now use the MADRE logo
   const clients = [
-    { name: 'MADRE Certification', logo: madreLogo },
-    { name: 'TechCorp Solutions', logo: madreLogo },
-    { name: 'Global Manufacturing', logo: madreLogo },
-    { name: 'EcoSolutions Ltd', logo: madreLogo },
-    { name: 'MedDevice Industries', logo: madreLogo },
-    { name: 'FoodSafe Corporation', logo: madreLogo },
-    { name: 'AutoParts International', logo: madreLogo },
-    { name: 'PharmaX Group', logo: madreLogo },
-    { name: 'BuildCorp Engineering', logo: madreLogo },
-    { name: 'InfoSec Professional', logo: madreLogo },
-    { name: 'QualityFirst Systems', logo: madreLogo },
+    { name: 'MADRE Certification', logo: "clinets/client-1.png" },
+    { name: 'TechCorp Solutions', logo: "clinets/client-2.jpg" },
+    { name: 'Global Manufacturing', logo: "clinets/client-3.jpg" },
+    { name: 'EcoSolutions Ltd', logo: "clinets/client-4.jpg" },
+    { name: 'MedDevice Industries', logo: "clinets/client-5.png" },
+    { name: 'FoodSafe Corporation', logo: "clinets/client-6.png" },
+    { name: 'AutoParts International', logo: "clinets/client-7.jpg" },
+    { name: 'PharmaX Group', logo:  "clinets/client-8.jpg" },
+    // { name: 'BuildCorp Engineering', logo: madreLogo },
+    // { name: 'InfoSec Professional', logo: madreLogo },
+    // { name: 'QualityFirst Systems', logo: madreLogo },
   ];
 
   // Duplicate the array for seamless loop
@@ -65,11 +67,11 @@ export function ClientLogosSection() {
             {duplicatedClients.map((client, index) => (
               <motion.div
                 key={`${client.name}-${index}`}
-                className="flex-shrink-0 bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group"
+                className="flex-shrink-0  rounded-lg p-6    duration-300 group"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <div className="w-32 h-16 flex items-center justify-center">
+                <div className="w-32 h-[70px] flex items-center justify-center">
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}

@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { Button } from './ui/button';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 // import madreLogo from 'figma:asset/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png';
-import madreLogo from '../../public/palji_3.jpg';
-
+// import madreLogo from '../../public/palji_3.jpg';
+const madreLogo =
+  "https://folk-dawn-94548267.figma.site/_assets/v10/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,25 +18,23 @@ export function Header() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'HOME', href: '#home' },
-    { name: 'CORPORATE PROFILE', href: '#about' },
-    { name: 'SERVICES', href: '#services' },
-    { name: 'THIRD PARTY INSPECTION', href: '#inspection' },
-    { name: 'MEDIA CENTRE', href: '#media' },
-    { name: 'CONTACT US', href: '#contact' },
+    { name: "HOME", href: "#home" },
+    { name: "CORPORATE PROFILE", href: "#about" },
+    { name: "SERVICES", href: "#services" },
+    { name: "THIRD PARTY INSPECTION", href: "#inspection" },
+    { name: "MEDIA CENTRE", href: "#media" },
+    { name: "CONTACT US", href: "#contact" },
   ];
 
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -44,15 +43,15 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <motion.div 
+          <motion.div
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <div className="h-10 w-auto">
-              <img 
-                src={madreLogo} 
-                alt="MADRE Certification" 
+            <div className="h-[50px] sm:h-[80px] w-auto">
+              <img
+                src={madreLogo}
+                alt="MADRE Certification"
                 className="h-full w-auto object-contain"
               />
             </div>
@@ -64,7 +63,7 @@ export function Header() {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-brand-blue transition-colors duration-200 relative group text-sm font-medium"
+                className="text-gray-700 hover:text-brand-blue transition-colors duration-200 relative group text-md font-medium"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
@@ -92,7 +91,11 @@ export function Header() {
             className="lg:hidden p-2 text-gray-700 hover:text-brand-blue transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -101,7 +104,7 @@ export function Header() {
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg"
