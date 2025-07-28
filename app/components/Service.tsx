@@ -98,11 +98,11 @@ export default function Services() {
     
 
       {/* Main Content */}
-      <main className="pt-32 pb-20">
+      <main className="">
     
 
         {/* Services Section */}
-        <section id="services" className="py-20 bg-gray-50">
+        <section id="services" className="py-10 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <motion.h2 
