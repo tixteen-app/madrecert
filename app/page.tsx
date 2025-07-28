@@ -5,6 +5,7 @@ import { WhyChooseUsSection } from './components/WhyChooseUsSection';
 import { ClientLogosSection } from './components/ClientLogosSection';
 import { BlogSection } from './components/BlogSection';
 import { Footer } from './components/Footer';
+import Services from './components/Service';
 
 export default function App() { 
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <Services/>
         <WhyChooseUsSection />
         <ClientLogosSection />
         <BlogSection />
