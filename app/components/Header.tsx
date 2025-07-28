@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-// import madreLogo from 'figma:asset/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png';
-// import madreLogo from '../../public/palji_3.jpg';
 const madreLogo =
   "https://folk-dawn-94548267.figma.site/_assets/v10/66d5e82c8e9f9cdfa28edcbc542625c1cd9b1450.png";
 
@@ -34,7 +32,7 @@ export function Header() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}

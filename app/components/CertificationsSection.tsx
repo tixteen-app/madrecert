@@ -6,8 +6,8 @@ import { Button } from './ui/button';
 
 export function CertificationsSection() {
   const certifications = [
-    {
-      icon: Shield,
+    { 
+      icon: Shield,   
       title: 'ISO 9001',
       subtitle: 'Quality Management',
       description: 'Ensure consistent quality and customer satisfaction through effective quality management systems.',
